@@ -431,6 +431,10 @@ body {
     line-height: 1.6;
 }
 
+.expansion .section-title {
+    text-align: center;
+}
+
 /* CTA Section */
 .cta {
     padding: 100px 0;
@@ -1250,5 +1254,50 @@ body {
         padding: 12px 20px;
         font-size: 0.95rem;
     }
+}
+
+/* Contact Section */
+.contact-section {
+    position: relative;
+    padding: 80px 0;
+    color: white;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.contact-section .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.contact-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.contact-section .section-title {
+    margin-bottom: 20px;
+}
+
+.contact-section .section-subtitle {
+    margin-bottom: 40px;
+}
+
+.contact-section .contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-section .btn {
+    min-width: 200px;
 }
 
