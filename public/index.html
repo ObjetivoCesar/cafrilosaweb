@@ -11,25 +11,52 @@
 <body>
     <!-- Header -->
     <header class="header">
-        <nav class="navbar">
-            <div class="nav-container">
+           <nav class="navbar">
+            <div class="container">
                 <div class="nav-logo">
                     <img src="public/images/CAFRILOSA_logo.png" alt="Cafrilosa Logo" class="logo">
                     <span class="brand-name">CAFRILOSA</span>
                 </div>
-                <ul class="nav-menu">
+                
+                <!-- Desktop Menu -->
+                <ul class="nav-menu desktop-menu">
                     <li><a href="#empresa" class="nav-link">Empresa</a></li>
                     <li><a href="#calidad" class="nav-link">Calidad</a></li>
                     <li><a href="#productos" class="nav-link">Productos</a></li>
                     <li><a href="https://cafrilosa-vendedores.vercel.app/" target="_blank" class="nav-link">Vendedores</a></li>
                     <li><a href="#contacto" class="nav-link">Contacto</a></li>
                 </ul>
-                <div class="nav-contact">
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                
+                <div class="nav-contact desktop-only">
                     <a href="tel:+59372613393" class="contact-btn">
                         <i class="fas fa-phone"></i>
                         (07) 2 613 393
                     </a>
                 </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <ul class="mobile-nav-list">
+                    <li><a href="#empresa" class="mobile-nav-link" onclick="closeMobileMenu()">Empresa</a></li>
+                    <li><a href="#calidad" class="mobile-nav-link" onclick="closeMobileMenu()">Calidad</a></li>
+                    <li><a href="#productos" class="mobile-nav-link" onclick="closeMobileMenu()">Productos</a></li>
+                    <li><a href="https://cafrilosa-vendedores.vercel.app/" target="_blank" class="mobile-nav-link">Vendedores</a></li>
+                    <li><a href="#contacto" class="mobile-nav-link" onclick="closeMobileMenu()">Contacto</a></li>
+                    <li class="mobile-contact">
+                        <a href="tel:+59372613393" class="mobile-contact-btn">
+                            <i class="fas fa-phone"></i>
+                            (07) 2 613 393
+                        </a>
+                    </li>
+                </ul>
             </div>
         </nav>
     </header>
@@ -37,18 +64,29 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    CAFRILOSA: Sabor y Tradición con la Calidad que tus Clientes Buscan
-                </h1>
-                <p class="hero-subtitle">
-                    Más de 58 años innovando para ofrecerte embutidos y carnes de exportación, 
-                    adaptados a las nuevas exigencias del mercado sin comprometer el sabor auténtico ni la seguridad.
-                </p>
-                <p class="hero-message">
-                    Conviértete en el socio ideal de tus clientes al ofrecerles productos que generan 
-                    confianza y deleite en cada comida, respaldados por nuestra trayectoria y constante evolución.
-                </p>
+                   <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="desktop-text">CAFRILOSA - Sabor y Tradición con Calidad de Exportación</span>
+                        <span class="mobile-text">CAFRILOSA<br>Calidad de Exportación</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        <span class="desktop-text">
+                            Más de 58 años innovando para ofrecerte embutidos y carnes de exportación, 
+                            adaptados a las nuevas exigencias del mercado sin comprometer el sabor auténtico ni la seguridad.
+                        </span>
+                        <span class="mobile-text">
+                            Más de 58 años innovando en embutidos y carnes de exportación con sabor auténtico y seguridad garantizada.
+                        </span>
+                    </p>
+                    <p class="hero-description">
+                        <span class="desktop-text">
+                            Conviértete en el socio ideal de tus clientes al ofrecerles productos que generan confianza 
+                            y deleite en cada comida, respaldados por nuestra trayectoria y constante evolución.
+                        </span>
+                        <span class="mobile-text">
+                            Tu socio ideal para productos que generan confianza y deleite, respaldados por nuestra trayectoria.
+                        </span>
+                    </p>
                 <div class="hero-buttons">
                     <a href="#contacto" class="btn btn-primary">Contactar a Ventas</a>
                     <a href="#productos" class="btn btn-secondary">Ver Productos</a>
@@ -65,10 +103,18 @@
     <section id="calidad" class="benefits">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Beneficios Incomparables para tu Negocio</h2>
+                <h2 class="section-title">
+                    <span class="desktop-text">Beneficios Incomparables para tu Negocio</span>
+                    <span class="mobile-text">Beneficios para tu Negocio</span>
+                </h2>
                 <p class="section-subtitle">
-                    Al elegir Cafrilosa, te unes a una tradición de excelencia que garantiza 
-                    la satisfacción de tus consumidores y el crecimiento sostenido de tus ventas.
+                    <span class="desktop-text">
+                        Al elegir Cafrilosa, te unes a una tradición de excelencia que garantiza 
+                        la satisfacción de tus consumidores y el crecimiento sostenido de tus ventas.
+                    </span>
+                    <span class="mobile-text">
+                        Únete a una tradición de excelencia que garantiza satisfacción y crecimiento.
+                    </span>
                 </p>
             </div>
             
@@ -77,12 +123,21 @@
                     <div class="benefit-icon">
                         <i class="fas fa-certificate"></i>
                     </div>
-                    <h3>Calidad Certificada y Confiable</h3>
+                    <h3>
+                        <span class="desktop-text">Calidad Certificada y Confiable</span>
+                        <span class="mobile-text">Calidad Certificada</span>
+                    </h3>
                     <p>
-                        Nuestros rigurosos controles de calidad, procesos de trazabilidad y la prestigiosa 
-                        certificación BPM (Buenas Prácticas de Manufactura) aseguran productos seguros y de 
-                        calidad de exportación, lo que se traduce en la plena confianza de tus clientes y 
-                        en un respaldo sólido para tu negocio.
+                        <span class="desktop-text">
+                            Nuestros rigurosos controles de calidad, procesos de trazabilidad y la prestigiosa 
+                            certificación BPM (Buenas Prácticas de Manufactura) aseguran productos seguros y de 
+                            calidad de exportación, lo que se traduce en la plena confianza de tus clientes y 
+                            en un respaldo sólido para tu negocio.
+                        </span>
+                        <span class="mobile-text">
+                            Controles rigurosos, trazabilidad y certificación BPM garantizan productos seguros 
+                            de calidad exportación para la confianza de tus clientes.
+                        </span>
                     </p>
                 </div>
                 
@@ -90,11 +145,20 @@
                     <div class="benefit-icon">
                         <i class="fas fa-layer-group"></i>
                     </div>
-                    <h3>Portafolio Diverso y Adaptado</h3>
+                    <h3>
+                        <span class="desktop-text">Portafolio Diverso y Adaptado</span>
+                        <span class="mobile-text">Portafolio Diverso</span>
+                    </h3>
                     <p>
-                        Ofrecemos una amplia gama de embutidos y carnes, incluyendo pollo y tocino ahumado, 
-                        jamones, salchichas, chorizos y mortadelas. Constantemente innovamos con opciones más 
-                        ligeras o reformuladas para satisfacer al consumidor moderno y sus preferencias saludables.
+                        <span class="desktop-text">
+                            Ofrecemos una amplia gama de embutidos y carnes, incluyendo pollo y tocino ahumado, 
+                            jamones, salchichas, chorizos y mortadelas. Constantemente innovamos con opciones más 
+                            ligeras o reformuladas para satisfacer al consumidor moderno y sus preferencias saludables.
+                        </span>
+                        <span class="mobile-text">
+                            Amplia gama de embutidos y carnes. Innovamos constantemente con opciones 
+                            más ligeras para el consumidor moderno.
+                        </span>
                     </p>
                 </div>
                 
@@ -102,12 +166,21 @@
                     <div class="benefit-icon">
                         <i class="fas fa-cogs"></i>
                     </div>
-                    <h3>Tecnología de Punta para un Suministro Óptimo</h3>
+                    <h3>
+                        <span class="desktop-text">Tecnología de Punta para un Suministro Óptimo</span>
+                        <span class="mobile-text">Tecnología de Punta</span>
+                    </h3>
                     <p>
-                        Invertimos en maquinaria de última generación y procesos eficientes para asegurar una 
-                        producción constante y la disponibilidad que tu negocio requiere. Nuestra reciente 
-                        implementación de "Cafrilosa Digital" nos posiciona en la Industria 4.0, mejorando 
-                        aún más la eficiencia operativa y la precisión en nuestros procesos.
+                        <span class="desktop-text">
+                            Invertimos en maquinaria de última generación y procesos eficientes para asegurar una 
+                            producción constante y la disponibilidad que tu negocio requiere. Nuestra reciente 
+                            implementación de "Cafrilosa Digital" nos posiciona en la Industria 4.0, mejorando 
+                            aún más la eficiencia operativa y la precisión en nuestros procesos.
+                        </span>
+                        <span class="mobile-text">
+                            Maquinaria de última generación y "Cafrilosa Digital" aseguran producción 
+                            constante y disponibilidad para tu negocio.
+                        </span>
                     </p>
                 </div>
             </div>
@@ -337,4 +410,5 @@
     <script src="widget.js"></script>
 </body>
 </html>
+
 
