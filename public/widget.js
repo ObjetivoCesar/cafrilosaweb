@@ -20,7 +20,7 @@ const renderWidget = () => {
     if (!isOpen) {
         chatWidgetContainer.innerHTML = `
             <button id="open-chat-btn" class="chat-toggle-btn">
-                <img src="public/images/CAFRILOSA_logo.png" alt="Cafrilosa Logo" class="chat-logo-btn">
+                <img src="images/CAFRILOSA_logo.png" alt="Cafrilosa Logo" class="chat-logo-btn">
             </button>
         `;
         document.getElementById("open-chat-btn").onclick = () => {
@@ -33,7 +33,7 @@ const renderWidget = () => {
             <div class="chat-window">
                 <div class="chat-header">
                     <div class="chat-header-info">
-                        <img src="public/images/CAFRILOSA_logo.png" alt="Cafrilosa Logo" class="chat-logo-header">
+                        <img src="images/CAFRILOSA_logo.png" alt="Cafrilosa Logo" class="chat-logo-header">
                         <h3 class="chat-title">Chat con Cafrilosa</h3>
                     </div>
                     <div class="chat-header-actions">
@@ -125,7 +125,7 @@ const renderMessages = () => {
         let logoHtml = "";
         if (message.sender === "assistant") {
             logoHtml = `<div class="chat-logo-message-container">
-                            <img src="public/images/CAFRILOSA_logo.png" alt="Asistente" class="chat-logo-message">
+                            <img src="images/CAFRILOSA_logo.png" alt="Asistente" class="chat-logo-message">
                         </div>`;
         }
 
@@ -148,7 +148,7 @@ const renderMessages = () => {
         loadingDiv.className = "chat-message assistant-message";
         loadingDiv.innerHTML = `
             <div class="chat-logo-message-container">
-                <img src="public/images/CAFRILOSA_logo.png" alt="Asistente" class="chat-logo-message">
+                <img src="images/CAFRILOSA_logo.png" alt="Asistente" class="chat-logo-message">
             </div>
             <div class="message-bubble">
                 <div class="loading-dots">
