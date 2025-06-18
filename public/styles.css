@@ -593,6 +593,57 @@ body {
     color: #999;
 }
 
+/* Modal Vendedores */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background: #fff;
+    margin: 5% auto;
+    padding: 0;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+    position: relative;
+}
+.close-modal {
+    color: #333;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+}
+.modal iframe {
+    border: none;
+    width: 100%;
+    height: 80vh;
+    border-radius: 0 0 10px 10px;
+}
+@media (max-width: 600px) {
+    .modal-content {
+        width: 98vw;
+        margin: 2vw auto;
+        padding: 0;
+    }
+    .modal iframe {
+        height: 60vh;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-menu {

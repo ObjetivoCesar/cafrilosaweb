@@ -293,3 +293,33 @@ window.addEventListener('resize', function() {
     }
 });
 
+// Modal Vendedores
+const vendedoresLink = document.getElementById('vendedores-link');
+const vendedoresLinkMobile = document.getElementById('vendedores-link-mobile');
+const vendedoresModal = document.getElementById('vendedores-modal');
+const closeVendedoresModal = document.getElementById('close-vendedores-modal');
+
+if (vendedoresLink) {
+    vendedoresLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        vendedoresModal.style.display = 'block';
+    });
+}
+if (vendedoresLinkMobile) {
+    vendedoresLinkMobile.addEventListener('click', function(e) {
+        e.preventDefault();
+        closeMobileMenu();
+        vendedoresModal.style.display = 'block';
+    });
+}
+if (closeVendedoresModal) {
+    closeVendedoresModal.addEventListener('click', function() {
+        vendedoresModal.style.display = 'none';
+    });
+}
+window.addEventListener('click', function(event) {
+    if (event.target === vendedoresModal) {
+        vendedoresModal.style.display = 'none';
+    }
+});
+

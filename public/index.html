@@ -23,7 +23,7 @@
                     <li><a href="#empresa" class="nav-link">Empresa</a></li>
                     <li><a href="#calidad" class="nav-link">Calidad</a></li>
                     <li><a href="#productos" class="nav-link">Productos</a></li>
-                    <li><a href="https://cafrilosa-vendedores.vercel.app/" target="_blank" class="nav-link">Vendedores</a></li>
+                    <li><a href="#" class="nav-link" id="vendedores-link">Vendedores</a></li>
                     <li><a href="#contacto" class="nav-link">Contacto</a></li>
                 </ul>
                 
@@ -41,12 +41,19 @@
                     <li><a href="#empresa" class="mobile-nav-link" onclick="closeMobileMenu()">Empresa</a></li>
                     <li><a href="#calidad" class="mobile-nav-link" onclick="closeMobileMenu()">Calidad</a></li>
                     <li><a href="#productos" class="mobile-nav-link" onclick="closeMobileMenu()">Productos</a></li>
-                    <li><a href="https://cafrilosa-vendedores.vercel.app/" target="_blank" class="mobile-nav-link">Vendedores</a></li>
+                    <li><a href="#" class="mobile-nav-link" id="vendedores-link-mobile">Vendedores</a></li>
                     <li><a href="#contacto" class="mobile-nav-link" onclick="closeMobileMenu()">Contacto</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+    <!-- Modal Vendedores -->
+    <div id="vendedores-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-vendedores-modal">&times;</span>
+            <iframe src="https://cafrilosa-vendedores.vercel.app/" allow="geolocation" frameborder="0" style="width:100%;height:80vh;"></iframe>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">
